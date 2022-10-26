@@ -11,8 +11,26 @@ const SailboatUpdate = ({ sailboat, handleChange, handleUpdateSailboat}) => {
             />
             <input
                 type='text'
-                value={sailboat.type}
-                name='type'
+                value={sailboat.manufacturer}
+                name='manufacturer'
+                onChange={handleChange}
+            />
+            <input
+                type='number'
+                value={sailboat.length}
+                name='length'
+                onChange={handleChange}
+            />
+            <input
+                type='number'
+                value={sailboat.beam}
+                name='beam'
+                onChange={handleChange}
+            />
+            <input
+                type='number'
+                value={sailboat.hulls}
+                name='hulls'
                 onChange={handleChange}
             />
             <button onClick={handleUpdateSailboat}>Update Sailboat</button>
