@@ -1,5 +1,5 @@
 import React, { useState } from 'react' 
-import { SailboatCreate } from '../api/sailboat'
+import { sailboatCreate } from '../api/sailboat'
 
 const SailboatCreate = ({ user, msgAlert }) => {
 
