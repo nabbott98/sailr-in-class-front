@@ -42,30 +42,35 @@ const SailboatCreate = ({ user, msgAlert }) => {
 					value={sailboat.name}
 					name='name'
 					onChange={handleChange}
+                    placeholder='Name'
 				/>
                 <input
 					type='text'
 					value={sailboat.manufacturer}
 					name='manufacturer'
 					onChange={handleChange}
+                    placeholder='Manufacturer'
 				/>
                 <input
 					type='number'
 					value={sailboat.length}
 					name='length'
 					onChange={handleChange}
+                    placeholder='Length'
 				/>
                 <input
 					type='number'
 					value={sailboat.beam}
 					name='beam'
 					onChange={handleChange}
+                    placeholder='Beam Width'
 				/>
 				<input
 					type='number'
 					value={sailboat.hulls}
 					name='hulls'
 					onChange={handleChange}
+                    placeholder='# of Hulls'
 				/>
 				<button onClick={handleCreateSailboat}>Create Sailboat</button>
 			</>
