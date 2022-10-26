@@ -13,6 +13,8 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 import SailboatCreate from './components/SailboatCreate'
+import SailboatIndex from './components/SailboatIndex'
+import SailboatShow from './components/SailboatShow'
 
 const App = () => {
 
@@ -54,28 +56,42 @@ const App = () => {
 						path='/sign-in'
 						element={<SignIn msgAlert={msgAlert} setUser={setUser} />}
 					/>
-          <Route
-            path='/sign-out'
-            element={
-              <RequireAuth user={user}>
-                <SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />
-              </RequireAuth>
-            }
-          />
-          <Route
-            path='/change-password'
-            element={
-              <RequireAuth user={user}>
-                <ChangePassword msgAlert={msgAlert} user={user} />
-              </RequireAuth>}
-          />
-		  <Route
-            path='/sailboats'
-            element={
-              <RequireAuth user={user}>
-                <SailboatCreate msgAlert={msgAlert} user={user} />
-              </RequireAuth>}
-          />
+				<Route
+					path='/sign-out'
+					element={
+					<RequireAuth user={user}>
+						<SignOut msgAlert={msgAlert} clearUser={clearUser} user={user} />
+					</RequireAuth>
+					}
+				/>
+				<Route
+					path='/change-password'
+					element={
+					<RequireAuth user={user}>
+						<ChangePassword msgAlert={msgAlert} user={user} />
+					</RequireAuth>}
+				/>
+				<Route
+					path='/create'
+					element={
+					<RequireAuth user={user}>
+						<SailboatCreate msgAlert={msgAlert} user={user} />
+					</RequireAuth>}
+				/>
+				<Route
+					path='/sailboats'
+					element={
+					<RequireAuth user={user}>
+						<SailboatIndex msgAlert={msgAlert} user={user} />
+					</RequireAuth>}
+				/>
+				<Route
+					path='/sailboats/:id'
+					element={
+					<RequireAuth user={user}>
+						<SailboatShow msgAlert={msgAlert} user={user} />
+					</RequireAuth>}
+				/>
 				</Routes>
 				{msgAlerts.map((msgAlert) => (
 					<AutoDismissAlert
