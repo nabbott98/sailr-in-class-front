@@ -45,7 +45,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
 	<>
 		<Nav.Link>
-			<Link to='/' style={linkStyle}>
+			<Link to='/sailboats' style={linkStyle}>
 				Home
 			</Link>
 		</Nav.Link>
@@ -55,8 +55,8 @@ const alwaysOptions = (
 const Header = ({ user }) => (
 	<Navbar bg='primary' variant='dark' expand='md'>
 		<Navbar.Brand>
-            <Link to='/' style={linkStyle}>
-                react-auth-template
+            <Link to='/sailboats' style={linkStyle}>
+                SAILR
             </Link>
         </Navbar.Brand>
 		<Navbar.Toggle aria-controls='basic-navbar-nav' />
