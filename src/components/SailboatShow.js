@@ -82,7 +82,10 @@ const SailboatShow = ({ user, msgAlert}) => {
     return(
         <>
             <h3>Name: {sailboat.name}</h3>
-            <p>Type: {sailboat.type}</p>
+            <p>Manufacturer: {sailboat.manufacturer}</p>
+            <p>Length: {sailboat.length}</p>
+            <p>Beam: {sailboat.beam}</p>
+            <p>Hulls: {sailboat.hulls}</p>
             <button onClick={toggleShowUpdate}>Update</button>
             {isUpdateShown && (
                 <SailboatUpdate sailboat={sailboat}
