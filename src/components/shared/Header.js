@@ -19,8 +19,13 @@ const authenticatedOptions = (
 			</Link>
 		</Nav.Item>
 		<Nav.Item>
-			<Link to='sailboats' style={linkStyle}>
+			<Link to='create' style={linkStyle}>
 				Create a Sailboat
+			</Link>
+		</Nav.Item>
+		<Nav.Item>
+			<Link to='sailboats' style={linkStyle}>
+				Index all Sailboats
 			</Link>
 		</Nav.Item>
 	</>
